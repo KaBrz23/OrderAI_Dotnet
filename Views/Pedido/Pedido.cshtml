@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Página de novo Pedido";
+}
+
+<h1>Fazer Pedido</h1>
+
+<div class="text-left">
+    <form asp-controller="Pedido" asp-action="RealizarPedido" method="post">
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Valor Total</label>
+            <input name="ValorTotal" type="text" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Frete Entrega</label>
+            <input name="FreteEntrega" type="text" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Data do Pedido</label>
+            <input name="DataPedido" type="date" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Data da Entrega</label>
+            <input name="DataEntrega" class="form-control form-control-lg" type="date">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Recomendaçãp</label>
+            <input name="recomendacao" class="form-control form-control-lg" type="text">
+        </div>
+
+        <p></p>
+        <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+    </form>
+</div>

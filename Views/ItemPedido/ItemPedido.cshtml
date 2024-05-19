@@ -1,0 +1,37 @@
+@{
+ViewData["Title"] = "Página de Item Pedido";
+}
+
+<h1>Cadastrar Novo Item</h1>
+
+<div class="text-left">
+    <form asp-controller="ItemPedido" asp-action="CadastrarItem" method="post">
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Nome Item</label>
+            <input name="nome" type="text" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Descrição</label>
+            <input name="descricao" type="text" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Quantidade</label>
+            <input name="quantidade" type="number" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Preço</label>
+            <input name="preco" class="form-control form-control-lg" type="text">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Recomendação</label>
+            <input name="recomendacao" class="form-control form-control-lg" type="text">
+        </div>
+
+        <p></p>
+        <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+    </form>
+</div>

@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Página de novo Pagamento";
+}
+
+<h1>Cadastrar Novo Pagamento</h1>
+
+<div class="text-left">  
+    <form asp-controller="Pagamento" asp-action="CadastrarPagamento" method="post">
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Número do Cartão</label>
+            <input name="num_cartao" type="text" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Nome do Cartão</label>
+            <input name="nome_cartao" type="text" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Data de Validade</label>
+            <input name="data_validade" type="date" class="form-control form-control-lg">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">CVV</label>
+            <input name="cvv" class="form-control form-control-lg" type="number">
+        </div>
+
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Apelido para o cartão</label>
+            <input name="apelido_cartao" class="form-control form-control-lg" type="text">
+        </div>
+
+        <p></p>
+        <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>  
+    </form>
+</div>

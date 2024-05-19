@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Página de Login";
+}
+
+<form asp-controller="Usuario" asp-action="EfetuarLogin" method="get">
+    <h2>Realizar Login:</h2>
+
+    <div class="mb-3">
+
+        <label for="exampleFormControlInput1" class="form-label">Endereço de E-mail</label>
+
+        <input name="UserEmail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+    </div>
+
+    <label for="inputPassword5" class="form-label">Senha</label>
+
+    <input name="UserPassword" type="password" id="inputPassword5" class="form-control">
+
+    <p></p>
+    <button type="submit" class="btn btn-primary btn-lg">Logar</button>
+
+</form>
