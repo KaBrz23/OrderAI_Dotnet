@@ -26,8 +26,8 @@ namespace OrderAI_Dotnet.Migrations
                     cidade = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     estado = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     cpf = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
-                    dataCadastro = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     dataNascimento = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    dataCadastro = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     sexo = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
                 },
                 constraints: table =>

@@ -44,8 +44,8 @@ public class UsuarioController : Controller
             cidade = request.cidade,
             estado = request.estado,
             cpf = request.cpf,
-            dataCadastro = request.data_cadastro,
-            dataNascimento = request.data_nascimento,
+            dataNascimento = request.dataNascimento,
+            dataCadastro = request.dataCadastro,
             sexo = request.sexo,
         };
         _dataContext.Add(newUser);
@@ -53,7 +53,7 @@ public class UsuarioController : Controller
         return RedirectToAction("Login");
     }
     
-    public IActionResult EfetuarLogin(LoginDTO request) 
+    public IActionResult EfetuarLogin(UsuarioDTO request) 
     {
         var find = _dataContext.TabelaUsuario.FirstOrDefault(x => x.email == request.email);
         if (find == null) 

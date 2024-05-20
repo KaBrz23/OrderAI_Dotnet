@@ -29,4 +29,8 @@
       <_ContentIncludedByDefault Remove="Views\Pedido\Pedido.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="DTOs\LoginDTO.cs" />
+    </ItemGroup>
+
 </Project>

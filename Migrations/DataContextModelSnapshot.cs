@@ -29,7 +29,27 @@ namespace OrderAI_Dotnet.Migrations
                         .HasColumnType("NUMBER(10)");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
+                    
+                    b.Property<string>("nome")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+                    
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+                    
+                    b.Property<string>("senha")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+                    
+                    b.Property<string>("telefone")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+                    
+                    b.Property<string>("endereco")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+                    
                     b.Property<string>("cep")
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
@@ -37,42 +57,22 @@ namespace OrderAI_Dotnet.Migrations
                     b.Property<string>("cidade")
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("cpf")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("dataCadastro")
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("dataNascimento")
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("email")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("endereco")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
+                    
                     b.Property<string>("estado")
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
-                    b.Property<string>("nome")
+                    b.Property<string>("cpf")
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("senha")
-                        .IsRequired()
+                    
+                    b.Property<string>("dataNascimento")
                         .HasColumnType("NVARCHAR2(2000)");
 
+                    b.Property<string>("dataCadastro")
+                        .HasColumnType("NVARCHAR2(2000)");
+                    
                     b.Property<string>("sexo")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("telefone")
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
@@ -87,18 +87,18 @@ namespace OrderAI_Dotnet.Migrations
                     .HasColumnType("NUMBER(10)");
 
                 OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                
+                b.Property<decimal>("ValorTotal")
+                    .HasColumnType("DECIMAL(10, 2)");
+                
+                b.Property<decimal>("FreteEntrega")
+                    .HasColumnType("DECIMAL(10, 2)");
 
                 b.Property<string>("DataEntrega")
                     .HasColumnType("NVARCHAR2(2000)");
 
                 b.Property<string>("DataPedido")
                     .HasColumnType("NVARCHAR2(2000)");
-
-                b.Property<decimal>("FreteEntrega")
-                    .HasColumnType("DECIMAL(10, 2)");
-
-                b.Property<decimal>("ValorTotal")
-                    .HasColumnType("DECIMAL(10, 2)");
 
                 b.HasKey("Id");
 

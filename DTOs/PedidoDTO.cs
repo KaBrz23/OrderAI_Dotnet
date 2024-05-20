@@ -5,11 +5,11 @@ namespace OrderAI_Dotnet.DTOs;
 public class PedidoDTO
 {
     [Required]
-    public decimal valor_total { get; set; }
+    public decimal ValorTotal { get; set; }
     [Required]
-    public decimal frete_entrega { get; set; }
+    public decimal FreteEntrega { get; set; }
     [Required]
-    public string data_pedido { get; set; } = string.Empty;
+    public string DataPedido { get; set; } = string.Empty;
     [Required]
-    public string data_entrega { get; set; } = string.Empty;
+    public string DataEntrega { get; set; } = string.Empty;
 }

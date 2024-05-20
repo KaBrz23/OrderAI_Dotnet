@@ -26,10 +26,10 @@ public class PedidoController : Controller
     public IActionResult RealizarPedido(PedidoDTO request)
     {
         Pedido newPed = new Pedido { 
-            ValorTotal = request.valor_total,
-            FreteEntrega = request.frete_entrega,
-            DataPedido = request.data_pedido,
-            DataEntrega = request.data_entrega,
+            ValorTotal = request.ValorTotal,
+            FreteEntrega = request.FreteEntrega,
+            DataPedido = request.DataPedido,
+            DataEntrega = request.DataEntrega,
         };
         _dataContext.Add(newPed);
         _dataContext.SaveChanges();

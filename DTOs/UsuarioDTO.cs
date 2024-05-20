@@ -25,9 +25,11 @@ public class UsuarioDTO
     public string estado { get; set; } = string.Empty;
     [Required]
     public string cpf { get; set; } = string.Empty;
-    public string data_cadastro { get; set; }
     [Required]
-    public string data_nascimento { get; set; }
+    public string dataNascimento { get; set; }
+    [Required]
+    public string dataCadastro { get; set; }
+    
     [Required]
     public string sexo { get; set; } = string.Empty;
 }
